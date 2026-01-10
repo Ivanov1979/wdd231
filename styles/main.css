@@ -1,0 +1,281 @@
+:root {
+    --bg: #ffffff;
+    --text: #111111;
+    --muted: #555555;
+    --surface: #f2f2f2;
+    --bar: #1f1f1f;
+    --barText: #ffffff;
+    --border: #c9c9c9;
+    --radius: 12px;
+    --max: 980px;
+    --pad: 1rem;
+    --font: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block
+}
+
+.container {
+    width: min(var(--max), 100%);
+    margin: 0 auto;
+    padding: var(--pad);
+}
+
+header {
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+}
+
+.header-inner {
+    width: min(var(--max), 100%);
+    margin: 0 auto;
+    padding: .75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: .75rem
+}
+
+.site-name {
+    font-weight: 700
+}
+
+#menuButton {
+    border: 1px solid var(--border);
+    background: #fff;
+    border-radius: 10px;
+    padding: .45rem .7rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav {
+    display: none;
+    flex-direction: column;
+    background: var(--bar);
+}
+
+.nav.open {
+    display: flex
+}
+
+.nav a {
+    color: var(--barText);
+    text-decoration: none;
+    padding: 1rem;
+    border-top: 1px solid #333;
+    transition: background-color .15s ease-in-out;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+    background: #2a2a2a
+}
+
+.nav a.active {
+    background: #111;
+    font-weight: 700
+}
+
+h1 {
+    margin: 0;
+    padding: 1rem 0 .5rem
+}
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #fff;
+    margin: 1rem 0;
+}
+
+.card h2 {
+    margin: 0;
+    background: var(--bar);
+    color: var(--barText);
+    padding: .6rem .9rem;
+    font-size: 1rem;
+}
+
+.card .content {
+    background: var(--surface);
+    padding: var(--pad);
+}
+
+.photo img {
+    width: 180px;
+    margin: 0 auto;
+    padding: .5rem;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: .75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.filter-btn {
+    min-width: 90px;
+    padding: .55rem .9rem;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color .15s ease-in-out;
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible {
+    background: #f7f7f7
+}
+
+.filter-btn.active {
+    background: #e6e6e6
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .75rem;
+}
+
+.course {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: .65rem .75rem;
+    background: #fff;
+    text-align: center;
+    font-weight: 700;
+}
+
+.course.completed {
+    outline: 3px solid #2b6b2b
+}
+
+.course small {
+    display: block;
+    margin-top: .15rem;
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.credits {
+    text-align: center;
+    margin: 1rem 0 0
+}
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    padding: 1rem;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: .75rem;
+    flex-wrap: wrap;
+    margin-bottom: .75rem;
+}
+
+.social a {
+    text-decoration: none;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text);
+    padding: .5rem .8rem;
+    border-radius: 10px;
+    transition: background-color .15s ease-in-out;
+}
+
+.social a:hover,
+.social a:focus-visible {
+    background: #f7f7f7
+}
+
+@media (min-width:720px) {
+    #menuButton {
+        display: none
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: .5rem;
+        background: transparent;
+        width: min(980px, 100%);
+        margin: 0 auto;
+        padding: 0 1rem 1rem;
+    }
+
+    .nav a {
+        background: var(--bar);
+        border: 1px solid var(--bar);
+        border-radius: 10px;
+        padding: .6rem 1rem;
+    }
+
+    main.container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+        align-items: start;
+    }
+
+    main.container h1 {
+        grid-column: 1/-1
+    }
+
+    .about {
+        grid-column: 1/2
+    }
+
+    .photo {
+        grid-column: 2/3
+    }
+
+    .courses {
+        grid-column: 1/-1
+    }
+
+    .course-list {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+.photo .content {
+    padding: .5rem;
+}

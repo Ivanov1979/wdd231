@@ -3,16 +3,83 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>WDD231</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="WDD 231 course home page">
+    <meta name="author" content="Ivan Sanhueza">
+    <title>WDD 231 | Home</title>
 
-    <!-- Normalize FIRST -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script defer src="scripts/main.js"></script>
 </head>
 
 <body>
+    <header>
+        <div class="header-inner">
+            <div class="brand">
+                <img src="images/logo.svg" alt="Site logo" width="48" height="48">
+                <span class="site-name">Ivan Sanhueza</span>
+            </div>
+            <button id="menuButton" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">☰</button>
+        </div>
 
-    <h1>Normalize CSS Test</h1>
+        <nav id="primaryNav" class="nav">
+            <a class="active" href="index.html">Home</a>
+            <a href="chamber/index.html">Chamber</a>
+            <a href="final/index.html">Final</a>
+        </nav>
+    </header>
 
+    <main class="container">
+        <h1>Home</h1>
+
+        <section class="card about">
+            <h2>About Me</h2>
+            <div class="content">
+                <p>Short personal description goes here.</p>
+            </div>
+        </section>
+
+        <section class="card photo">
+            <h2>Student Photo</h2>
+            <div class="content">
+                <img src="images/student.webp" alt="Student photo" width="500" height="500" loading="lazy">
+            </div>
+        </section>
+
+        <section class="card courses">
+            <h2>Web Certificate Courses</h2>
+            <div class="content">
+                <div class="filters">
+                    <button class="filter-btn" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="cse">CSE</button>
+                    <button class="filter-btn" data-filter="wdd">WDD</button>
+                </div>
+
+                <div id="courseList" class="course-list"></div>
+
+                <p class="credits">
+                    Total credits: <strong><span id="creditTotal">0</span></strong>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="social">
+            <a href="https://github.com/Ivanov1979" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a>
+        </div>
+
+        <p>© <span id="currentyear"></span> Ivan Sanhueza • Chile</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>

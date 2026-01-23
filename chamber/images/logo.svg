@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" aria-label="Chamber of Commerce logo">
+  <defs>
+    <linearGradient id="spectrum" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b5cff"></stop>
+      <stop offset="20%" stop-color="#6fa8ff"></stop>
+      <stop offset="40%" stop-color="#ffffff"></stop>
+      <stop offset="60%" stop-color="#ffe066"></stop>
+      <stop offset="80%" stop-color="#ff9f43"></stop>
+      <stop offset="100%" stop-color="#d62828"></stop>
+    </linearGradient>
+  </defs>
+
+  <circle cx="100" cy="100" r="95" fill="#111111"></circle>
+  <circle cx="100" cy="100" r="85" fill="none" stroke="url(#spectrum)" stroke-width="10"></circle>
+
+  <polygon points="100,55 110,85 142,85 116,104
+            126,135 100,116 74,135
+            84,104 58,85 90,85" fill="#ffffff"></polygon>
+
+  <text x="100" y="165" text-anchor="middle" font-size="14" font-family="Arial, Helvetica, sans-serif" letter-spacing="2" fill="#ffffff">
+    CHAMBER
+  </text>
+</svg>

@@ -1,0 +1,60 @@
+{
+    "members": [
+        {
+            "name": "Costa Norte Panadería",
+            "address": "Av. Arturo Prat 850, Iquique",
+            "phone": "+56 9 4871 2234",
+            "website": "https://example.com/costa-norte",
+            "membershipLevel": "Silver",
+            "image": "images/members/bakery.webp"
+        },
+        {
+            "name": "Tarapacá Tech Services",
+            "address": "Serrano 410, Iquique",
+            "phone": "+56 9 6123 8891",
+            "website": "https://example.com/tarapaca-tech",
+            "membershipLevel": "Gold",
+            "image": "images/members/tech.webp"
+        },
+        {
+            "name": "Zofri Logistics Group",
+            "address": "Ruta A-16 Km 2, Iquique",
+            "phone": "+56 2 2345 7788",
+            "website": "https://example.com/zofri-logistics",
+            "membershipLevel": "Gold",
+            "image": "images/members/logistics.webp"
+        },
+        {
+            "name": "Hospitality Tamarugal",
+            "address": "Baquedano 120, Iquique",
+            "phone": "+56 9 7002 3344",
+            "website": "https://example.com/tamarugal-hospitality",
+            "membershipLevel": "Silver",
+            "image": "images/members/hotel.webp"
+        },
+        {
+            "name": "Caleta Brava Seafood",
+            "address": "Esmeralda 95, Iquique",
+            "phone": "+56 9 5333 2211",
+            "website": "https://example.com/caleta-brava",
+            "membershipLevel": "Non-Profit",
+            "image": "images/members/seafood.webp"
+        },
+        {
+            "name": "Altiplano Fitness Center",
+            "address": "Av. Héroes de la Concepción 2300, Iquique",
+            "phone": "+56 9 4555 6677",
+            "website": "https://example.com/altiplano-fitness",
+            "membershipLevel": "Silver",
+            "image": "images/members/fitness.webp"
+        },
+        {
+            "name": "Iquique Legal & Accounting",
+            "address": "O’Higgins 510, Iquique",
+            "phone": "+56 2 2766 1122",
+            "website": "https://example.com/iquique-legal",
+            "membershipLevel": "Gold",
+            "image": "images/members/legal.webp"
+        }
+    ]
+}

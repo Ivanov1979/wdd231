@@ -1,0 +1,252 @@
+:root {
+    --bg: #0b1220;
+    --surface: #111a2e;
+    --card: #0f1930;
+    --text: #eef2ff;
+    --muted: #c7d2fe;
+    --border: rgba(238, 242, 255, .18);
+    --accent: #7aa2ff;
+    --accent2: #60f0d2;
+    --radius: 16px;
+    --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    --max: 1100px;
+    --font: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(var(--max), calc(100% - 2rem));
+    margin-inline: auto;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: #fff;
+    color: #000;
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    z-index: 1000;
+}
+
+.site-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1rem 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.logo {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+}
+
+.brand-name {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.brand-tagline {
+    margin: 0;
+    font-size: .9rem;
+    color: var(--muted);
+}
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: .5rem .75rem;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.site-nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.site-nav a {
+    padding: .6rem 1.2rem;
+    border-radius: 999px;
+    font-size: 1.4rem;
+}
+
+.site-nav a.active {
+    background: rgba(122, 162, 255, .25);
+}
+
+.page {
+    padding: 2rem 0 3rem;
+}
+
+.page-header h1 {
+    margin: .2rem 0;
+    font-size: 2rem;
+}
+
+.lead {
+    margin: 0;
+    max-width: 65ch;
+    color: var(--muted);
+}
+
+.controls {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: .5rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.btn[aria-pressed="true"] {
+    background: rgba(96, 240, 210, .25);
+}
+
+.hint {
+    color: var(--muted);
+}
+
+.directory {
+    margin-top: 1rem;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.members-list {
+    display: grid;
+    gap: .75rem;
+}
+
+.member-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    display: grid;
+    gap: .6rem;
+}
+
+.logo-box {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.members-list .logo-box {
+    display: none;
+}
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    padding: 1.2rem 0;
+    color: var(--muted);
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+@media (max-width:720px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .site-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: .75rem;
+        padding: .75rem;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+    }
+
+    .site-nav[data-open="true"] {
+        display: flex;
+    }
+
+    .logo {
+        width: 56px;
+        height: 56px;
+    }
+}

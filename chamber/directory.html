@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Directory of Chamber members in Iquique, Chile, featuring local businesses and organizations.">
+    <title>Iquique Chamber | Directory</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <img src="images/logo.svg" alt="Iquique Chamber logo" width="44" height="44" class="logo">
+
+            </div>
+        </div>
+
+        <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false"
+            aria-controls="primaryNav">
+            ☰
+        </button>
+
+        <nav id="primaryNav" class="site-nav" aria-label="Main navigation" data-open="false">
+            <a href="index.html">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html" class="active" aria-current="page">Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+        </div>
+    </header>
+
+    <main id="main" class="container page">
+        <header class="page-header">
+            <h1>Member Directory</h1>
+            <p class="lead">
+                Connect with Chamber members across Iquique and the Tarapacá region.
+            </p>
+        </header>
+
+        <section class="controls" aria-label="Directory view controls">
+            <h2 class="sr-only">Display options</h2>
+
+            <div class="toggle" role="group" aria-label="Grid or list view">
+                <button id="gridBtn" class="btn" type="button" aria-pressed="true">Grid</button>
+                <button id="listBtn" class="btn" type="button" aria-pressed="false">List</button>
+            </div>
+
+            <div id="status" class="hint" aria-live="polite"></div>
+        </section>
+
+        <section class="directory" aria-label="Chamber members">
+            <div id="members" class="members-grid"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> Iquique Chamber • Chile</p>
+            <p>WDD 231 — Chamber Directory Page</p>
+        </div>
+    </footer>
+</body>
+
+</html>

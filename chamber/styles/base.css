@@ -14,7 +14,7 @@
 }
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 html,
@@ -50,8 +50,8 @@ a {
     position: absolute;
     left: -999px;
     top: 0;
-    background: #fff;
-    color: #000;
+    background: #ffffff;
+    color: #000000;
     padding: .5rem .75rem;
     border-radius: .5rem;
 }
@@ -60,6 +60,18 @@ a {
     left: 1rem;
     top: 1rem;
     z-index: 1000;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .site-header {

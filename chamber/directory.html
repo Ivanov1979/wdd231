@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Directory of Chamber members in Iquique, Chile, featuring local businesses and organizations.">
+    <meta name="author" content="Iván Sanhueza">
     <title>Iquique Chamber | Directory</title>
     <link rel="stylesheet" href="styles/base.css">
     <script src="scripts/directory.js" defer></script>
@@ -17,22 +18,24 @@
     <header class="site-header">
         <div class="container header-inner">
             <div class="brand">
-                <img src="images/logo.svg" alt="Iquique Chamber logo" width="44" height="44" class="logo">
-
+                <img src="images/logo.webp" alt="Iquique Chamber logo" class="logo">
+                <div>
+                    <p class="brand-name">Iquique Chamber</p>
+                    <p class="brand-tagline">Impulsando negocios locales</p>
+                </div>
             </div>
-        </div>
 
-        <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false"
-            aria-controls="primaryNav">
-            ☰
-        </button>
+            <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle navigation menu"
+                aria-expanded="false" aria-controls="primaryNav">
+                ☰
+            </button>
 
-        <nav id="primaryNav" class="site-nav" aria-label="Main navigation" data-open="false">
-            <a href="index.html">Home</a>
-            <a href="discover.html">Discover</a>
-            <a href="directory.html" class="active" aria-current="page">Directory</a>
-            <a href="join.html">Join</a>
-        </nav>
+            <nav id="primaryNav" class="site-nav" aria-label="Main navigation" data-open="false">
+                <a href="index.html">Home</a>
+                <a href="discover.html">Discover</a>
+                <a href="directory.html" class="active" aria-current="page">Directory</a>
+                <a href="join.html">Join</a>
+            </nav>
         </div>
     </header>
 
@@ -56,6 +59,7 @@
         </section>
 
         <section class="directory" aria-label="Chamber members">
+            <h2 class="sr-only">Chamber members</h2>
             <div id="members" class="members-grid"></div>
         </section>
     </main>

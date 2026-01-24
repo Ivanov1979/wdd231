@@ -1,0 +1,21 @@
+@media (min-width: 720px) {
+    .header-inner {
+        align-items: center;
+    }
+
+    .site-nav a {
+        font-size: 1rem;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
+    }
+
+    .controls {
+        align-items: center;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

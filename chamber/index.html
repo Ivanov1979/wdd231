@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Welcome to the Iquique Chamber of Commerce. Explore local events, weather updates, and featured member spotlights." />
+    <title>Iquique Chamber of Commerce | Home</title>
+
+
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img src="images/logo.svg" alt="Iquique Chamber logo" width="48" height="48">
+
+                <span>Iquique Chamber</span>
+            </a>
+
+            <button id="menu" aria-label="Open menu"></button>
+
+            <nav id="nav" class="navigation">
+                <a href="index.html" class="active">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="discover.html">Discover</a>
+                <a href="join.html">Join</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="home">
+        <section class="hero">
+            <picture>
+                <picture>
+                    <source srcset="images/hero-large.webp" media="(min-width: 800px)">
+                    <img src="images/hero-small.webp" alt="City view of Iquique" width="1200" height="600"
+                        loading="lazy">
+                </picture>
+
+            </picture>
+
+            <div class="hero-overlay">
+                <h1>Grow with the Iquique Chamber</h1>
+                <p>Connect, promote, and build stronger local business.</p>
+                <a class="btn cta" href="join.html">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="home-grid">
+            <section class="card events">
+                <h2>Current Events</h2>
+                <ul class="event-list">
+                    <li>
+                        <h3>Business Networking Night</h3>
+                        <p><strong>Date:</strong> Feb 3, 2026</p>
+                        <p><strong>Location:</strong> Downtown Conference Center</p>
+                    </li>
+                    <li>
+                        <h3>Small Business Workshop</h3>
+                        <p><strong>Date:</strong> Feb 10, 2026</p>
+                        <p><strong>Location:</strong> Chamber Hall</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="card weather">
+                <h2>Weather</h2>
+
+                <div class="weather-now">
+                    <p class="temp">
+                        <span id="current-temp">--</span><span class="deg">°</span>
+                    </p>
+                    <p id="weather-desc">Loading...</p>
+                </div>
+
+                <h3>3-Day Forecast</h3>
+                <div class="forecast" id="forecast"></div>
+            </section>
+
+            <section class="card spotlights">
+                <h2>Member Spotlights</h2>
+                <div class="spotlight-grid" id="spotlights"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; <span id="year"></span> Iquique Chamber of Commerce</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script type="module" src="scripts/weather.js"></script>
+    <script type="module" src="scripts/spotlights.js"></script>
+</body>
+
+</html>

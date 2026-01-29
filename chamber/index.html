@@ -4,7 +4,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Iquique Chamber of Commerce Home">
+
+    <meta name="description"
+        content="The Iquique Chamber of Commerce supports local businesses through networking, events, advocacy, and community growth.">
+    <meta name="author" content="Iván Sanhueza">
+
+    <meta property="og:title" content="Iquique Chamber of Commerce Home Page">
+    <meta property="og:description"
+        content="Discover local events, current weather, and featured member spotlights. Join the Iquique Chamber to connect and grow your business.">
+    <meta property="og:image" content="https://ivanov1979.github.io/wdd231/chamber/images/hero-large.webp">
+    <meta property="og:url" content="https://ivanov1979.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <title>Iquique Chamber | Home</title>
 
     <link rel="stylesheet" href="styles/base.css">
@@ -32,14 +47,13 @@
             </button>
 
             <nav id="primaryNav" class="site-nav" aria-label="Main navigation" data-open="false">
-                <a href="index.html">Home</a>
+                <a href="index.html" class="active" aria-current="page">Home</a>
                 <a href="discover.html">Discover</a>
-                <a href="directory.html" class="active" aria-current="page">Directory</a>
+                <a href="directory.html">Directory</a>
                 <a href="join.html">Join</a>
             </nav>
         </div>
     </header>
-
 
     <main>
 
@@ -102,13 +116,9 @@
         <p>&copy; <span id="year"></span> Iquique Chamber of Commerce</p>
     </footer>
 
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-
+    <script src="scripts/getdates.js" defer></script>
     <script type="module" src="scripts/weather.js"></script>
     <script type="module" src="scripts/spotlights.js"></script>
-
 </body>
 
 </html>

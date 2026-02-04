@@ -1,0 +1,19 @@
+.thankyou-main {
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.submitted-card {
+    padding: 1rem;
+}
+
+dl {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+}

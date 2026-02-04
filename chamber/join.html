@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Join the Chamber of Commerce">
+    <title>Join | Chamber</title>
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <a href="index.html" class="brand-link">
+                <img src="images/logo.svg" alt="Chamber logo" width="48" height="48" loading="lazy">
+                <span>Chamber</span>
+            </a>
+        </div>
+
+        <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html" aria-current="page">Join</a>
+        </nav>
+    </header>
+
+    <main class="join-main">
+        <h1>Join the Chamber</h1>
+
+        <div class="join-layout">
+            <section class="join-form-section">
+                <h2>Membership Application</h2>
+
+                <form method="get" action="thankyou.html" class="join-form">
+                    <label>
+                        First Name
+                        <input type="text" name="first" required title="First name" autocomplete="given-name">
+                    </label>
+
+                    <label>
+                        Last Name
+                        <input type="text" name="last" required title="Last name" autocomplete="family-name">
+                    </label>
+
+                    <label>
+                        Organizational Title
+                        <input type="text" name="orgtitle" title="Organizational title"
+                            autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}">
+                    </label>
+
+                    <label>
+                        Email
+                        <input type="email" name="email" required title="Email address" autocomplete="email"
+                            placeholder="name@example.com">
+                    </label>
+
+                    <label>
+                        Mobile Phone
+                        <input type="tel" name="phone" required title="Mobile phone" autocomplete="tel">
+                    </label>
+
+                    <label>
+                        Business / Organization Name
+                        <input type="text" name="business" required title="Business name" autocomplete="organization">
+                    </label>
+
+                    <label>
+                        Membership Level
+                        <select name="level" required title="Membership level">
+                            <option value="" disabled selected>Select a level</option>
+                            <option value="np">NP Membership</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Business Description
+                        <textarea name="description" rows="5" title="Business description"></textarea>
+                    </label>
+
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <input type="submit" value="Submit Application" class="btn-submit">
+                </form>
+            </section>
+
+            <aside class="membership-cards">
+                <div class="card">
+                    <h3>NP Membership</h3>
+                    <p>No fee for non-profits.</p>
+                    <a href="#" class="open-modal" data-modal="modal-np">See benefits</a>
+                </div>
+
+                <div class="card">
+                    <h3>Bronze Membership</h3>
+                    <p>Entry-level benefits.</p>
+                    <a href="#" class="open-modal" data-modal="modal-bronze">See benefits</a>
+                </div>
+
+                <div class="card">
+                    <h3>Silver Membership</h3>
+                    <p>More visibility and discounts.</p>
+                    <a href="#" class="open-modal" data-modal="modal-silver">See benefits</a>
+                </div>
+
+                <div class="card">
+                    <h3>Gold Membership</h3>
+                    <p>Premium promotion and perks.</p>
+                    <a href="#" class="open-modal" data-modal="modal-gold">See benefits</a>
+                </div>
+            </aside>
+        </div>
+
+        <dialog id="modal-np" class="modal">
+            <h2>NP Membership</h2>
+            <ul>
+                <li>No membership fee</li>
+                <li>Community events</li>
+            </ul>
+            <button class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="modal-bronze" class="modal">
+            <h2>Bronze Membership</h2>
+            <ul>
+                <li>Directory listing</li>
+                <li>Networking events</li>
+            </ul>
+            <button class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="modal-silver" class="modal">
+            <h2>Silver Membership</h2>
+            <ul>
+                <li>Event discounts</li>
+                <li>Training sessions</li>
+            </ul>
+            <button class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="modal-gold" class="modal">
+            <h2>Gold Membership</h2>
+            <ul>
+                <li>Spotlight advertising</li>
+                <li>Premium support</li>
+            </ul>
+            <button class="close-modal">Close</button>
+        </dialog>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Chamber</p>
+    </footer>
+
+    <script type="module" src="scripts/join.js"></script>
+</body>
+
+</html>

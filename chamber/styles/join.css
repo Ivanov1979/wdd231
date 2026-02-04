@@ -1,0 +1,58 @@
+.join-main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.join-layout {
+    display: grid;
+    gap: 1rem;
+}
+
+.join-form {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.join-form label {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.membership-cards {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.6s forwards;
+}
+
+.card:nth-child(2) {
+    animation-delay: .15s;
+}
+
+.card:nth-child(3) {
+    animation-delay: .3s;
+}
+
+.card:nth-child(4) {
+    animation-delay: .45s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 800px) {
+    .join-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+}

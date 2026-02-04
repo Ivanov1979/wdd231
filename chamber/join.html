@@ -4,8 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Join the Chamber of Commerce">
-    <title>Join | Chamber</title>
+
+    <title>Join the Chamber of Commerce | Iquique Chamber</title>
+
+    <meta name="description"
+        content="Join the Iquique Chamber of Commerce to connect with local businesses, access exclusive events, training opportunities, and grow your organization.">
+    <meta name="author" content="Iván Sanhueza">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Join the Iquique Chamber of Commerce">
+    <meta property="og:description"
+        content="Become a member of the Iquique Chamber of Commerce and enjoy networking, training, promotion, and business growth opportunities.">
+    <meta property="og:image" content="https://ivanov1979.github.io/wdd231/chamber/images/logo.webp">
+    <meta property="og:url" content="https://ivanov1979.github.io/wdd231/chamber/join.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
@@ -14,19 +30,27 @@
 
 <body>
     <header class="site-header">
-        <div class="brand">
-            <a href="index.html" class="brand-link">
-                <img src="images/logo.svg" alt="Chamber logo" width="48" height="48" loading="lazy">
-                <span>Chamber</span>
-            </a>
-        </div>
+        <div class="container header-inner">
+            <div class="brand">
+                <img src="images/logo.svg" alt="Iquique Chamber logo" class="logo">
+                <div>
+                    <p class="brand-name">Iquique Chamber</p>
+                    <p class="brand-tagline">Impulsando negocios locales</p>
+                </div>
+            </div>
 
-        <nav class="site-nav">
-            <a href="index.html">Home</a>
-            <a href="discover.html">Discover</a>
-            <a href="directory.html">Directory</a>
-            <a href="join.html" aria-current="page">Join</a>
-        </nav>
+            <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle navigation menu"
+                aria-expanded="false" aria-controls="primaryNav">
+                ☰
+            </button>
+
+            <nav id="primaryNav" class="site-nav" aria-label="Main navigation" data-open="false">
+                <a href="index.html">Home</a>
+                <a href="discover.html">Discover</a>
+                <a href="directory.html" class="active" aria-current="page">Directory</a>
+                <a href="join.html">Join</a>
+            </nav>
+        </div>
     </header>
 
     <main class="join-main">
@@ -39,39 +63,42 @@
                 <form method="get" action="thankyou.html" class="join-form">
                     <label>
                         First Name
-                        <input type="text" name="first" required title="First name" autocomplete="given-name">
+                        <input id="first" type="text" name="first" required title="First name"
+                            autocomplete="given-name">
                     </label>
 
                     <label>
                         Last Name
-                        <input type="text" name="last" required title="Last name" autocomplete="family-name">
+                        <input id="last" type="text" name="last" required title="Last name" autocomplete="family-name">
                     </label>
 
                     <label>
                         Organizational Title
-                        <input type="text" name="orgtitle" title="Organizational title"
+                        <input id="orgtitle" type="text" name="orgtitle" title="Organizational title"
                             autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}">
                     </label>
 
                     <label>
                         Email
-                        <input type="email" name="email" required title="Email address" autocomplete="email"
+                        <input id="email" type="email" name="email" required title="Email address" autocomplete="email"
                             placeholder="name@example.com">
                     </label>
 
                     <label>
                         Mobile Phone
-                        <input type="tel" name="phone" required title="Mobile phone" autocomplete="tel">
+                        <input id="phone" type="tel" name="phone" required title="Mobile phone number"
+                            autocomplete="tel">
                     </label>
 
                     <label>
                         Business / Organization Name
-                        <input type="text" name="business" required title="Business name" autocomplete="organization">
+                        <input id="business" type="text" name="business" required title="Business or organization name"
+                            autocomplete="organization">
                     </label>
 
                     <label>
                         Membership Level
-                        <select name="level" required title="Membership level">
+                        <select id="level" name="level" required title="Membership level">
                             <option value="" disabled selected>Select a level</option>
                             <option value="np">NP Membership</option>
                             <option value="bronze">Bronze Membership</option>
@@ -82,7 +109,8 @@
 
                     <label>
                         Business Description
-                        <textarea name="description" rows="5" title="Business description"></textarea>
+                        <textarea id="description" name="description" rows="5"
+                            title="Business or organization description"></textarea>
                     </label>
 
                     <input type="hidden" name="timestamp" id="timestamp">
@@ -91,72 +119,76 @@
                 </form>
             </section>
 
-            <aside class="membership-cards">
+            <aside class="membership-cards" aria-label="Membership level information">
                 <div class="card">
                     <h3>NP Membership</h3>
-                    <p>No fee for non-profits.</p>
+                    <p>No fee for non-profit organizations.</p>
                     <a href="#" class="open-modal" data-modal="modal-np">See benefits</a>
                 </div>
 
                 <div class="card">
                     <h3>Bronze Membership</h3>
-                    <p>Entry-level benefits.</p>
+                    <p>Essential benefits for small businesses.</p>
                     <a href="#" class="open-modal" data-modal="modal-bronze">See benefits</a>
                 </div>
 
                 <div class="card">
                     <h3>Silver Membership</h3>
-                    <p>More visibility and discounts.</p>
+                    <p>Increased visibility and event discounts.</p>
                     <a href="#" class="open-modal" data-modal="modal-silver">See benefits</a>
                 </div>
 
                 <div class="card">
                     <h3>Gold Membership</h3>
-                    <p>Premium promotion and perks.</p>
+                    <p>Premium exposure and exclusive perks.</p>
                     <a href="#" class="open-modal" data-modal="modal-gold">See benefits</a>
                 </div>
             </aside>
         </div>
 
         <dialog id="modal-np" class="modal">
-            <h2>NP Membership</h2>
+            <h2>NP Membership Benefits</h2>
             <ul>
                 <li>No membership fee</li>
                 <li>Community events</li>
+                <li>Newsletter access</li>
             </ul>
-            <button class="close-modal">Close</button>
+            <button class="close-modal" type="button">Close</button>
         </dialog>
 
         <dialog id="modal-bronze" class="modal">
-            <h2>Bronze Membership</h2>
+            <h2>Bronze Membership Benefits</h2>
             <ul>
-                <li>Directory listing</li>
+                <li>Business directory listing</li>
                 <li>Networking events</li>
+                <li>Basic workshops</li>
             </ul>
-            <button class="close-modal">Close</button>
+            <button class="close-modal" type="button">Close</button>
         </dialog>
 
         <dialog id="modal-silver" class="modal">
-            <h2>Silver Membership</h2>
+            <h2>Silver Membership Benefits</h2>
             <ul>
+                <li>Everything in Bronze</li>
                 <li>Event discounts</li>
-                <li>Training sessions</li>
+                <li>Social media promotion</li>
             </ul>
-            <button class="close-modal">Close</button>
+            <button class="close-modal" type="button">Close</button>
         </dialog>
 
         <dialog id="modal-gold" class="modal">
-            <h2>Gold Membership</h2>
+            <h2>Gold Membership Benefits</h2>
             <ul>
-                <li>Spotlight advertising</li>
-                <li>Premium support</li>
+                <li>Everything in Silver</li>
+                <li>Homepage spotlight advertising</li>
+                <li>Priority support</li>
             </ul>
-            <button class="close-modal">Close</button>
+            <button class="close-modal" type="button">Close</button>
         </dialog>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; <span id="year"></span> Chamber</p>
+        <p>&copy; <span id="year"></span> Iquique Chamber</p>
     </footer>
 
     <script type="module" src="scripts/join.js"></script>

@@ -3,6 +3,7 @@ import { places } from "../data/places.mjs";
 const grid = document.querySelector(".discover-grid");
 const header = document.querySelector(".page-header");
 
+/* LocalStorage Message */
 const message = document.createElement("p");
 message.className = "visit-message";
 
@@ -20,8 +21,11 @@ if (!lastVisit) {
 
 localStorage.setItem("lastVisit", String(now));
 
-if (header) header.appendChild(message);
+if (header) {
+    header.appendChild(message);
+}
 
+/* Build Cards */
 function buildCard(place, i) {
     const card = document.createElement("article");
     card.className = "discover-card";
@@ -62,3 +66,7 @@ function buildCard(place, i) {
 places.slice(0, 8).forEach((place, i) => {
     grid.appendChild(buildCard(place, i));
 });
+
+/* Footer Information */
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Discover | Iquique Chamber of Commerce</title>
+
+    <meta name="description"
+        content="Discover places of interest in Iquique, including beaches, museums, viewpoints, and cultural landmarks across the Tarapacá region.">
+    <meta name="author" content="Iván Sanhueza">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <meta property="og:title" content="Discover Iquique | Chamber of Commerce">
+    <meta property="og:description"
+        content="Explore eight places of interest in Iquique with photos, addresses, and short descriptions.">
+    <meta property="og:image" content="https://ivanov1979.github.io/wdd231/chamber/images/android-chrome-512x512.png">
+    <meta property="og:url" content="https://ivanov1979.github.io/wdd231/chamber/discover.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/discover.css">
+
+    <script type="module" src="scripts/discover.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <img src="images/logo.svg" alt="Iquique Chamber logo" class="logo">
+                <div>
+                    <p class="brand-name">Iquique Chamber</p>
+                    <p class="brand-tagline">Impulsando negocios locales</p>
+                </div>
+            </div>
+
+            <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle navigation menu"
+                aria-expanded="false" aria-controls="primaryNav">
+                ☰
+            </button>
+
+            <nav id="primaryNav" class="site-nav" aria-label="Main navigation" data-open="false">
+                <a href="index.html">Home</a>
+                <a href="discover.html" class="active" aria-current="page">Discover</a>
+                <a href="directory.html">Directory</a>
+                <a href="join.html">Join</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="container">
+            <header class="page-header">
+                <h1>Discover Iquique</h1>
+                <p class="lead">Places of interest in the city and nearby areas. Click “Learn more” to explore.</p>
+            </header>
+
+            <section class="discover-grid" aria-label="Places of interest">
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> Iquique Chamber</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+
+</html>

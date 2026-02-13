@@ -1,0 +1,106 @@
+.discover-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+.discover-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    display: grid;
+    gap: .75rem;
+    transition: transform .3s ease;
+}
+
+.discover-card h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.discover-card figure {
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 3 / 2;
+}
+
+.discover-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.discover-card address {
+    font-style: normal;
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+.discover-card p {
+    margin: 0;
+    color: var(--text);
+}
+
+.discover-card button {
+    justify-self: start;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: .5rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.discover-card button:hover {
+    background: rgba(122, 162, 255, .2);
+}
+
+.visit-message {
+    margin-top: .5rem;
+    font-weight: 600;
+    color: var(--accent2);
+}
+
+/* Medium Layout */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+}
+
+/* Large Layout */
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 card8";
+    }
+
+    .discover-card img {
+        transition: transform .4s ease;
+    }
+
+    .discover-card img:hover {
+        transform: scale(1.05);
+    }
+}

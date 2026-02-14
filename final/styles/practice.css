@@ -1,0 +1,51 @@
+.practice-grid {
+    display: grid;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+@media (min-width: 980px) {
+    .practice-grid {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+.prompt {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: .2px;
+}
+
+.steps ol {
+    margin: .5rem 0 0;
+    padding-left: 1.1rem;
+    color: var(--muted);
+}
+
+.feedback {
+    font-weight: 800;
+    margin-top: .75rem;
+}
+
+.library {
+    display: grid;
+    gap: .75rem;
+}
+
+.template-card {
+    padding: .85rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    display: grid;
+    gap: .25rem;
+}
+
+.template-card strong {
+    color: var(--text)
+}
+
+.template-card span {
+    color: var(--muted);
+    font-weight: 700
+}

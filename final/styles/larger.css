@@ -1,0 +1,5 @@
+@media (min-width: 860px) {
+    .grid-2 {
+        grid-template-columns: 1.2fr .8fr
+    }
+}

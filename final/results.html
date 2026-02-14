@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Results | Fractions Practice</title>
+    <meta name="description"
+        content="Form action results page displaying submitted practice information using URLSearchParams.">
+    <meta name="author" content="Iván Sanhueza">
+
+    <link rel="icon" href="../chamber/images/favicon.ico">
+    <meta property="og:title" content="Practice Results">
+    <meta property="og:description" content="Submitted results for fraction practice using URL parameters.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/practice.css">
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/results.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <img src="../chamber/images/logo.svg" alt="Site logo" class="logo">
+                <div>
+                    <p class="brand-name">Fractions Path</p>
+                    <p class="brand-tagline">Unlike denominators • Grade 6 focus</p>
+                </div>
+            </div>
+
+            <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle navigation menu"
+                aria-expanded="false" aria-controls="primaryNav">☰</button>
+
+            <nav id="primaryNav" class="site-nav" aria-label="Main navigation" data-open="false">
+                <a href="index.html">Home</a>
+                <a href="concept.html">Concept</a>
+                <a href="practice.html">Practice</a>
+                <a href="../index.html">WDD231</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="container">
+            <header class="page-header">
+                <h1>Results</h1>
+                <p class="lead">This page displays valid form entries using URL Search Params.</p>
+            </header>
+
+            <section class="card" style="margin-top:1rem">
+                <h2>Submitted Data</h2>
+                <div id="results" class="library"></div>
+                <div style="margin-top:1rem">
+                    <a class="btn secondary" href="practice.html">Back to Practice</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> Iván Sanhueza</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

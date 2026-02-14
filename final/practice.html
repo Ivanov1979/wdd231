@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practice | Fractions Unlike Denominators</title>
+    <meta name="description"
+        content="Practice adding and subtracting fractions with unlike denominators using a generator, steps, and problem-based learning tasks.">
+    <meta name="author" content="Iván Sanhueza">
+
+    <link rel="icon" href="../chamber/images/favicon.ico">
+    <meta property="og:title" content="Practice: Fractions Unlike Denominators">
+    <meta property="og:description"
+        content="Interactive practice with feedback, step-by-step solutions, and a dynamic problem library.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/practice.css">
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/practice.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <img src="../chamber/images/logo.svg" alt="Site logo" class="logo">
+                <div>
+                    <p class="brand-name">Fractions Path</p>
+                    <p class="brand-tagline">Unlike denominators • Grade 6 focus</p>
+                </div>
+            </div>
+
+            <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle navigation menu"
+                aria-expanded="false" aria-controls="primaryNav">☰</button>
+
+            <nav id="primaryNav" class="site-nav" aria-label="Main navigation" data-open="false">
+                <a href="index.html">Home</a>
+                <a href="concept.html">Concept</a>
+                <a href="practice.html" class="active" aria-current="page">Practice</a>
+                <a href="../index.html">WDD231</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="container">
+            <header class="page-header">
+                <h1>Practice</h1>
+                <p class="lead">Choose a mode, solve the problem, and check your answer. Your score is saved.</p>
+            </header>
+
+            <section class="practice-grid" style="margin-top:1rem">
+                <article class="card">
+                    <h2>Generator</h2>
+
+                    <div style="display:flex; gap:.75rem; flex-wrap:wrap; align-items:end">
+                        <label style="min-width:220px">
+                            Mode
+                            <select id="mode" name="mode">
+                                <option value="apply">Apply (compute)</option>
+                                <option value="pbl">Problem-Based (word problem)</option>
+                            </select>
+                        </label>
+
+                        <div>
+                            <p style="margin:.2rem 0;color:var(--muted);font-weight:700">Score</p>
+                            <p style="margin:0;font-size:1.6rem;font-weight:800"><span id="score">0</span></p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:1rem" class="prompt" id="prompt"></div>
+
+                    <div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1rem; align-items:end">
+                        <label style="min-width:240px">
+                            Your answer (example 5/6)
+                            <input id="answer" type="text" inputmode="text" placeholder="e.g., 7/12" autocomplete="off">
+                        </label>
+
+                        <button class="btn" id="checkBtn" type="button">Check</button>
+                        <button class="btn secondary" id="newBtn" type="button">New</button>
+                        <button class="btn secondary" id="openHelp" type="button">Help</button>
+                    </div>
+
+                    <p class="feedback" id="feedback"></p>
+
+                    <div class="steps" id="steps"></div>
+
+                    <form method="get" action="results.html" style="margin-top:1.25rem; display:grid; gap:.75rem">
+                        <h3 style="margin:0">Submit your practice</h3>
+
+                        <label>
+                            Student name
+                            <input type="text" name="student" required autocomplete="name" placeholder="Your name">
+                        </label>
+
+                        <label>
+                            Reflection (one sentence)
+                            <input type="text" name="reflection" required placeholder="What did you learn today?">
+                        </label>
+
+                        <input type="hidden" name="score" id="scoreField" value="0">
+                        <input type="hidden" name="mode" id="modeField" value="apply">
+
+                        <button class="btn" type="submit">Go to Results</button>
+                    </form>
+
+                    <dialog class="dialog" id="helpDialog">
+                        <header>
+                            <h2>How to Answer</h2>
+                            <button id="closeHelp" type="button" aria-label="Close dialog">✕</button>
+                        </header>
+                        <ul>
+                            <li>Type answers as a simplified fraction, like <strong>5/6</strong>.</li>
+                            <li>Find the LCM to create equal-sized parts (common denominator).</li>
+                            <li>Convert each fraction, then add or subtract the numerators.</li>
+                        </ul>
+                    </dialog>
+                </article>
+
+                <aside class="card">
+                    <h2>Problem Template Library</h2>
+                    <p class="lead">This list is generated dynamically from a local ES module data file.</p>
+                    <div id="library" class="library" aria-label="Dynamic list of problem templates"></div>
+                </aside>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> Iván Sanhueza</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

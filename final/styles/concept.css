@@ -1,0 +1,53 @@
+.concept-grid {
+    display: grid;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+@media (min-width: 860px) {
+    .concept-grid {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+.model {
+    display: grid;
+    gap: .75rem;
+}
+
+.frac-bar {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    gap: .25rem;
+    max-width: 420px;
+}
+
+.cell {
+    height: 26px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: #fff;
+}
+
+.cell.filled {
+    background: rgba(37, 99, 235, .18);
+    border-color: rgba(37, 99, 235, .35);
+}
+
+.equation {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: 700;
+}
+
+.badge {
+    display: inline-block;
+    padding: .25rem .6rem;
+    border-radius: 999px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-weight: 700;
+}

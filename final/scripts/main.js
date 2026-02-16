@@ -1,38 +1,36 @@
+const year = document.getElementById("year");
+if (year) {
+    year.textContent = new Date().getFullYear();
+}
+
+const modified = document.getElementById("lastModified");
+if (modified) {
+    modified.textContent = document.lastModified;
+}
+
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("primaryNav");
 
 if (menuBtn && nav) {
     menuBtn.addEventListener("click", () => {
-        const isOpen = nav.getAttribute("data-open") === "true";
-        nav.setAttribute("data-open", String(!isOpen));
+        const isOpen = nav.dataset.open === "true";
+        nav.dataset.open = String(!isOpen);
         menuBtn.setAttribute("aria-expanded", String(!isOpen));
     });
 }
 
-const lastVisit = localStorage.getItem("finalLastVisit");
-const now = Date.now();
-localStorage.setItem("finalLastVisit", String(now));
+const lastVisit = document.getElementById("lastVisit");
 
-const lastVisitEl = document.getElementById("lastVisit");
-if (lastVisitEl) {
-    if (!lastVisit) {
-        lastVisitEl.textContent = "Welcome! This is your first visit.";
+if (lastVisit) {
+    const now = Date.now();
+    const stored = localStorage.getItem("lastVisit");
+
+    if (!stored) {
+        lastVisit.textContent = "Welcome! This is your first visit.";
     } else {
-        const days = Math.floor((now - Number(lastVisit)) / (1000 * 60 * 60 * 24));
-        lastVisitEl.textContent = days < 1 ? "Welcome back! You visited today." : `Welcome back! It has been ${days} day(s).`;
+        const days = Math.floor((now - Number(stored)) / (1000 * 60 * 60 * 24));
+        lastVisit.textContent = `You last visited ${days} day(s) ago.`;
     }
+
+    localStorage.setItem("lastVisit", String(now));
 }
-
-const y = document.getElementById("year");
-const lm = document.getElementById("lastModified");
-if (y) y.textContent = new Date().getFullYear();
-if (lm) lm.textContent = document.lastModified;
-const openBtn = document.getElementById("openModal");
-const closeBtn = document.getElementById("closeModal");
-const dlg = document.getElementById("whyDialog");
-
-if (openBtn && closeBtn && dlg) {
-    openBtn.addEventListener("click", () => dlg.showModal());
-    closeBtn.addEventListener("click", () => dlg.close());
-}
-

@@ -1,0 +1,9 @@
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.flex-wrap-gap {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+}

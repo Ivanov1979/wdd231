@@ -4,15 +4,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Results | Fractions Practice</title>
+
     <meta name="description"
-        content="Form action results page displaying submitted practice information using URLSearchParams.">
+        content="Results page displaying submitted fraction practice data using URL search parameters.">
     <meta name="author" content="Iván Sanhueza">
 
-    <link rel="icon" href="../chamber/images/favicon.ico">
-    <meta property="og:title" content="Practice Results">
-    <meta property="og:description" content="Submitted results for fraction practice using URL parameters.">
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Practice Results | Fractions Path">
+    <meta property="og:description"
+        content="View submitted results from fraction practice using URL search parameters.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ivanov1979.github.io/wdd231/final/images/og-image.webp">
+    <meta property="og:url" content="https://ivanov1979.github.io/wdd231/final/results.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +27,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/practice.css">
+    <link rel="stylesheet" href="styles/results.css">
 
     <script type="module" src="scripts/main.js"></script>
     <script type="module" src="scripts/results.js"></script>
@@ -30,7 +37,7 @@
     <header class="site-header">
         <div class="container header-inner">
             <div class="brand">
-                <img src="../chamber/images/logo.svg" alt="Site logo" class="logo">
+                <img src="images/logo.svg" alt="Fractions Path logo" class="logo">
                 <div>
                     <p class="brand-name">Fractions Path</p>
                     <p class="brand-tagline">Unlike denominators • Grade 6 focus</p>
@@ -53,14 +60,20 @@
         <div class="container">
             <header class="page-header">
                 <h1>Results</h1>
-                <p class="lead">This page displays valid form entries using URL Search Params.</p>
+                <p class="lead">
+                    This page displays valid form entries using URL search parameters.
+                </p>
             </header>
 
-            <section class="card" style="margin-top:1rem">
+            <section class="card results-top">
                 <h2>Submitted Data</h2>
-                <div id="results" class="library"></div>
-                <div style="margin-top:1rem">
-                    <a class="btn secondary" href="practice.html">Back to Practice</a>
+
+                <div id="resultsContainer" class="library" aria-live="polite"></div>
+
+                <div class="results-actions">
+                    <a class="btn secondary" href="practice.html">
+                        Back to Practice
+                    </a>
                 </div>
             </section>
         </div>

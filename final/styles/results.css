@@ -1,0 +1,10 @@
+.results-top {
+    margin-top: 1rem;
+}
+
+.results-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+}

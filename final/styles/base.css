@@ -18,10 +18,11 @@ body {
     color: #111;
 }
 
-.container {
+.page-container {
     width: min(var(--max), calc(100% - 2rem));
     margin-inline: auto;
 }
+
 
 .site-header {
     background: #fff;
